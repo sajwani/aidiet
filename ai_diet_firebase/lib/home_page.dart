@@ -79,8 +79,13 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Text("CALORIES CONSUMED",
                                   style: TextStyle(fontSize: 18)),
-                              SizedBox(width: 20,),
-                              Container(child: Text("$consumedcalories / $caloriestarget "),),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Container(
+                                child: Text(
+                                    "$consumedcalories / $caloriestarget "),
+                              ),
                             ],
                           ),
                           SizedBox(
@@ -90,7 +95,9 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Text("WATER CONSUMED",
                                   style: TextStyle(fontSize: 18)),
-                              SizedBox(width: 50,),
+                              SizedBox(
+                                width: 50,
+                              ),
                               Text("$waterconsumed/$watertarget"),
                             ],
                           ),
@@ -139,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(20.0),
                       child: Column(
                         children: [
-                          if(breakfastcheckbox==false)
+                          if (breakfastcheckbox == false)
                             Column(
                               children: [
                                 Row(
@@ -147,71 +154,75 @@ class _HomePageState extends State<HomePage> {
                                     SizedBox(
                                       height: 45.0,
                                       child: Padding(
-                                        padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                        child: GetBreakfast(false,false),
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetBreakfast(false, false),
                                       ),
                                     ),
-
                                     SizedBox(
                                       height: 45.0,
                                       child: Checkbox(
-                                        value:  breakfastcheckbox,
+                                        value: breakfastcheckbox,
                                         activeColor: Colors.blueAccent,
-                                        onChanged: (newBool)async{
-                                          if(breakfastcheckbox==false)
-                                          {
+                                        onChanged: (newBool) async {
+                                          if (breakfastcheckbox == false) {
                                             // String calories=await getItem("breakfast", true);
-                                            getItem("breakfast", true,false);
-                                            breakfastcheckbox=true;
-                                            setCheckbox(true,"breakfast");
+                                            getItem("breakfast", true, false);
+                                            breakfastcheckbox = true;
+                                            setCheckbox(true, "breakfast");
                                             //consumedcalories=consumedcalories+int.parse(calories);
-                                            consumedcalories=consumedcalories+int.parse(checkboxItem);
-                                            setConsumedCalories(false, consumedcalories,false);
-                                          }
-                                          else if(breakfastcheckbox==true)
-                                          {
+                                            consumedcalories =
+                                                consumedcalories +
+                                                    int.parse(checkboxItem);
+                                            setConsumedCalories(
+                                                false, consumedcalories, false);
+                                          } else if (breakfastcheckbox ==
+                                              true) {
                                             // String calories=await getItem("breakfast", true);
-                                            getItem("breakfast", true,false);
-                                            breakfastcheckbox=false;
-                                            setCheckbox(false,"breakfast");
+                                            getItem("breakfast", true, false);
+                                            breakfastcheckbox = false;
+                                            setCheckbox(false, "breakfast");
                                             // consumedcalories=consumedcalories-int.parse(calories);
-                                            consumedcalories=consumedcalories-int.parse(checkboxItem);
-                                            setConsumedCalories(false, consumedcalories,false);
+                                            consumedcalories =
+                                                consumedcalories -
+                                                    int.parse(checkboxItem);
+                                            setConsumedCalories(
+                                                false, consumedcalories, false);
                                           }
-                                          setState(()
-                                          {
-                                          });
+                                          setState(() {});
                                         },
                                       ),
                                     ),
                                   ],
                                 ),
-
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 45.0,
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetBreakfast(true,true),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 45.0,
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetBreakfast(true, true),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 45.0,
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetBreakfast(true,false),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 45.0,
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetBreakfast(true, false),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
-                          ),
                               ],
                             ),
-                          if(breakfastcheckbox==true&&lunchcheckbox==false)
+                          if (breakfastcheckbox == true &&
+                              lunchcheckbox == false)
                             Column(
                               children: [
                                 Row(
@@ -219,71 +230,75 @@ class _HomePageState extends State<HomePage> {
                                     SizedBox(
                                       height: 45.0,
                                       child: Padding(
-                                        padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                        child: GetLunch(false,false),
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetLunch(false, false),
                                       ),
                                     ),
-
                                     SizedBox(
                                       height: 45.0,
                                       child: Checkbox(
-                                        value:  lunchcheckbox,
+                                        value: lunchcheckbox,
                                         activeColor: Colors.blueAccent,
-                                        onChanged: (newBool)async{
-                                          if(lunchcheckbox==false)
-                                          {
+                                        onChanged: (newBool) async {
+                                          if (lunchcheckbox == false) {
                                             // String calories=await getItem("Lunch", true);
-                                            getItem("Lunch", true,false);
-                                            lunchcheckbox=true;
-                                            setCheckbox(true,"Lunch");
+                                            getItem("Lunch", true, false);
+                                            lunchcheckbox = true;
+                                            setCheckbox(true, "Lunch");
                                             // consumedcalories=consumedcalories+int.parse(calories);
-                                            consumedcalories=consumedcalories+int.parse(checkboxItem);
-                                            setConsumedCalories(false, consumedcalories,false);
-                                          }
-                                          else if(lunchcheckbox==true)
-                                          {
+                                            consumedcalories =
+                                                consumedcalories +
+                                                    int.parse(checkboxItem);
+                                            setConsumedCalories(
+                                                false, consumedcalories, false);
+                                          } else if (lunchcheckbox == true) {
                                             // String calories=await getItem("Lunch", true);
-                                            getItem("Lunch", true,false);
-                                            lunchcheckbox=false;
-                                            setCheckbox(false,"Lunch");
+                                            getItem("Lunch", true, false);
+                                            lunchcheckbox = false;
+                                            setCheckbox(false, "Lunch");
                                             // consumedcalories=consumedcalories-int.parse(calories);
-                                            consumedcalories=consumedcalories-int.parse(checkboxItem);
-                                            setConsumedCalories(false, consumedcalories,false);
+                                            consumedcalories =
+                                                consumedcalories -
+                                                    int.parse(checkboxItem);
+                                            setConsumedCalories(
+                                                false, consumedcalories, false);
                                           }
-                                          setState(()
-                                          {
-                                          });
+                                          setState(() {});
                                         },
                                       ),
                                     ),
                                   ],
                                 ),
-
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 45.0,
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetLunch(true,true),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 45.0,
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetLunch(true, true),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 45.0,
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetLunch(true,false),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 45.0,
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetLunch(true, false),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
-                          ),
                               ],
                             ),
-                          if(breakfastcheckbox==true&&lunchcheckbox==true&&dinnercheckbox==false)
+                          if (breakfastcheckbox == true &&
+                              lunchcheckbox == true &&
+                              dinnercheckbox == false)
                             Column(
                               children: [
                                 Row(
@@ -291,72 +306,75 @@ class _HomePageState extends State<HomePage> {
                                     SizedBox(
                                       height: 45.0,
                                       child: Padding(
-                                        padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                        child: GetDinner(false,false),
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetDinner(false, false),
                                       ),
                                     ),
-
                                     SizedBox(
                                       height: 45.0,
                                       child: Checkbox(
-                                        value:  dinnercheckbox,
+                                        value: dinnercheckbox,
                                         activeColor: Colors.blueAccent,
-                                        onChanged: (newBool)async{
-                                          if(dinnercheckbox==false)
-                                          {
-                                           // String calories=await getItem("dinner", true);
-                                            getItem("dinner", true,false);
-                                            dinnercheckbox=true;
-                                            setCheckbox(true,"dinner");
-                                            // consumedcalories=consumedcalories+int.parse(calories);
-                                            consumedcalories=consumedcalories+int.parse(checkboxItem);
-                                            setConsumedCalories(false, consumedcalories,false);
-                                          }
-                                          else if(dinnercheckbox==true)
-                                          {
+                                        onChanged: (newBool) async {
+                                          if (dinnercheckbox == false) {
                                             // String calories=await getItem("dinner", true);
-                                            getItem("dinner", true,false);
-                                            dinnercheckbox=false;
-                                            setCheckbox(false,"dinner");
+                                            getItem("dinner", true, false);
+                                            dinnercheckbox = true;
+                                            setCheckbox(true, "dinner");
+                                            // consumedcalories=consumedcalories+int.parse(calories);
+                                            consumedcalories =
+                                                consumedcalories +
+                                                    int.parse(checkboxItem);
+                                            setConsumedCalories(
+                                                false, consumedcalories, false);
+                                          } else if (dinnercheckbox == true) {
+                                            // String calories=await getItem("dinner", true);
+                                            getItem("dinner", true, false);
+                                            dinnercheckbox = false;
+                                            setCheckbox(false, "dinner");
                                             // consumedcalories=consumedcalories-int.parse(calories);
-                                            consumedcalories=consumedcalories-int.parse(checkboxItem);
-                                            setConsumedCalories(false, consumedcalories,false);
+                                            consumedcalories =
+                                                consumedcalories -
+                                                    int.parse(checkboxItem);
+                                            setConsumedCalories(
+                                                false, consumedcalories, false);
                                           }
-                                          setState(()
-                                          {
-
-                                          });
+                                          setState(() {});
                                         },
                                       ),
                                     ),
                                   ],
                                 ),
-
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 45.0,
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDinner(true,true),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 45.0,
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetDinner(true, true),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 45.0,
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDinner(true,false),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 45.0,
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetDinner(true, false),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
-                          ),
                               ],
                             ),
-                          if(breakfastcheckbox==true&&lunchcheckbox==true&&dinnercheckbox==true)
+                          if (breakfastcheckbox == true &&
+                              lunchcheckbox == true &&
+                              dinnercheckbox == true)
                             Column(
                               children: [
                                 Row(
@@ -364,69 +382,70 @@ class _HomePageState extends State<HomePage> {
                                     SizedBox(
                                       height: 45.0,
                                       child: Padding(
-                                        padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                        child: GetDinner(false,false),
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetDinner(false, false),
                                       ),
                                     ),
-
                                     SizedBox(
                                       height: 45.0,
                                       child: Checkbox(
-                                        value:  dinnercheckbox,
+                                        value: dinnercheckbox,
                                         activeColor: Colors.blueAccent,
-                                        onChanged: (newBool)async{
-                                          if(dinnercheckbox==false)
-                                          {
+                                        onChanged: (newBool) async {
+                                          if (dinnercheckbox == false) {
                                             // String calories=await getItem("dinner", true);
-                                            getItem("dinner", true,false);
-                                            dinnercheckbox=true;
-                                            setCheckbox(true,"dinner");
+                                            getItem("dinner", true, false);
+                                            dinnercheckbox = true;
+                                            setCheckbox(true, "dinner");
                                             // consumedcalories=consumedcalories+int.parse(calories);
-                                            consumedcalories=consumedcalories+int.parse(checkboxItem);
-                                            setConsumedCalories(false, consumedcalories,false);
-                                          }
-                                          else if(dinnercheckbox==true)
-                                          {
+                                            consumedcalories =
+                                                consumedcalories +
+                                                    int.parse(checkboxItem);
+                                            setConsumedCalories(
+                                                false, consumedcalories, false);
+                                          } else if (dinnercheckbox == true) {
                                             //String calories=await getItem("dinner", true);
-                                            getItem("dinner", true,false);
-                                            dinnercheckbox=false;
-                                            setCheckbox(false,"dinner");
+                                            getItem("dinner", true, false);
+                                            dinnercheckbox = false;
+                                            setCheckbox(false, "dinner");
                                             // consumedcalories=consumedcalories-int.parse(calories);
-                                            consumedcalories=consumedcalories-int.parse(checkboxItem);
-                                            setConsumedCalories(false, consumedcalories,false);
+                                            consumedcalories =
+                                                consumedcalories -
+                                                    int.parse(checkboxItem);
+                                            setConsumedCalories(
+                                                false, consumedcalories, false);
                                           }
-                                          setState(()
-                                          {
-
-                                          });
+                                          setState(() {});
                                         },
                                       ),
                                     ),
                                   ],
                                 ),
-
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 45.0,
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDinner(true,true),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 45.0,
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetDinner(true, true),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 45.0,
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDinner(true,false),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 45.0,
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                        child: GetDinner(true, false),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
-                          ),
                               ],
                             ),
                           SizedBox(
@@ -485,8 +504,7 @@ class _HomePageState extends State<HomePage> {
                           Row(
                             children: [
                               Container(
-                                child: Text
-                                  (ssteps),
+                                child: Text(ssteps),
                               ),
                             ],
                           ),

@@ -91,7 +91,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Breakfast:',
@@ -99,18 +100,14 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(0,"breakfast");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(0, "breakfast");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
                                     ),
                                   ),
-
                                 ],
                               ),
                             ],
@@ -124,34 +121,33 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(0,false,false),
+                                  child: GetDayBreakfast(0, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayBreakfast(0,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(0,true,false),
+                                  child: GetDayBreakfast(0, true, true),
                                 ),
                               ),
                             ],
                           ),
-
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayBreakfast(0, true, false),
+                                ),
+                              ),
+                            ],
+                          ),
 
                           Row(
                             children: [
@@ -166,7 +162,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Lunch:',
@@ -174,16 +171,13 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                      onPressed:() async{
-                                        await changeMeal(0,"Lunch");
-                                        setState(()
-                                        {
-
-                                        });
-                                      },
-                                      icon: Icon(
-                                        Icons.change_circle,
-                                      ),
+                                    onPressed: () async {
+                                      await changeMeal(0, "Lunch");
+                                      setState(() {});
+                                    },
+                                    icon: Icon(
+                                      Icons.change_circle,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -195,30 +189,30 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(0,false,false),
+                                  child: GetDayLunch(0, false, false),
                                 ),
                               ),
                             ],
                           ),
 
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayLunch(0,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(0,true,false),
+                                  child: GetDayLunch(0, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayLunch(0, true, false),
                                 ),
                               ),
                             ],
@@ -240,7 +234,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Dinner:',
@@ -248,12 +243,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(0,"dinner");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(0, "dinner");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -269,29 +261,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(0,false,false),
+                                  child: GetDayDinner(0, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayDinner(0,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(0,true,false),
+                                  child: GetDayDinner(0, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayDinner(0, true, false),
                                 ),
                               ),
                             ],
@@ -354,7 +346,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Breakfast:',
@@ -362,12 +355,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(1,"breakfast");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(1, "breakfast");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -386,29 +376,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(1,false,false),
+                                  child: GetDayBreakfast(1, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayBreakfast(1,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(1,true,false),
+                                  child: GetDayBreakfast(1, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayBreakfast(1, true, false),
                                 ),
                               ),
                             ],
@@ -427,7 +417,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Lunch:',
@@ -435,12 +426,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(1,"Lunch");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(1, "Lunch");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -456,29 +444,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(1,false,false),
+                                  child: GetDayLunch(1, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayLunch(1,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(1,true,false),
+                                  child: GetDayLunch(1, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayLunch(1, true, false),
                                 ),
                               ),
                             ],
@@ -500,7 +488,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Dinner:',
@@ -508,12 +497,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(1,"dinner");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(1, "dinner");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -529,29 +515,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(1,false,false),
+                                  child: GetDayDinner(1, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayDinner(1,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(1,true,false),
+                                  child: GetDayDinner(1, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayDinner(1, true, false),
                                 ),
                               ),
                             ],
@@ -614,7 +600,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Breakfast:',
@@ -622,12 +609,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(2,"breakfast");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(2, "breakfast");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -646,29 +630,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(2,false,false),
+                                  child: GetDayBreakfast(2, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayBreakfast(2,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(2,true,false),
+                                  child: GetDayBreakfast(2, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayBreakfast(2, true, false),
                                 ),
                               ),
                             ],
@@ -687,7 +671,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Lunch:',
@@ -695,12 +680,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                    await changeMeal(2,"Lunch");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(2, "Lunch");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -716,29 +698,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(2,false,false),
+                                  child: GetDayLunch(2, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayLunch(2,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(2,true,false),
+                                  child: GetDayLunch(2, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayLunch(2, true, false),
                                 ),
                               ),
                             ],
@@ -760,7 +742,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Dinner:',
@@ -768,12 +751,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(2,"dinner");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(2, "dinner");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -789,29 +769,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(2,false,false),
+                                  child: GetDayDinner(2, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayDinner(2,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(2,true,false),
+                                  child: GetDayDinner(2, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayDinner(2, true, false),
                                 ),
                               ),
                             ],
@@ -840,8 +820,7 @@ class _DietPlanState extends State<DietPlan> {
                               borderRadius: BorderRadius.circular(40),
                             )),
                         onPressed: () {},
-                        child:
-                        Text('Day 4', style: TextStyle(fontSize: 20)),
+                        child: Text('Day 4', style: TextStyle(fontSize: 20)),
                       ),
                     ),
                   ],
@@ -875,7 +854,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Breakfast:',
@@ -883,12 +863,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(3,"breakfast");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(3, "breakfast");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -907,29 +884,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(3,false,false),
+                                  child: GetDayBreakfast(3, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayBreakfast(3,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(3,true,false),
+                                  child: GetDayBreakfast(3, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayBreakfast(3, true, false),
                                 ),
                               ),
                             ],
@@ -948,7 +925,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Lunch:',
@@ -956,12 +934,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(3,"Lunch");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(3, "Lunch");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -977,29 +952,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(3,false,false),
+                                  child: GetDayLunch(3, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayLunch(3,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(3,true,false),
+                                  child: GetDayLunch(3, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayLunch(3, true, false),
                                 ),
                               ),
                             ],
@@ -1021,7 +996,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Dinner:',
@@ -1029,12 +1005,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(3,"dinner");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(3, "dinner");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1050,29 +1023,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(3,false,false),
+                                  child: GetDayDinner(3, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayDinner(3,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(3,true,false),
+                                  child: GetDayDinner(3, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayDinner(3, true, false),
                                 ),
                               ),
                             ],
@@ -1135,7 +1108,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Breakfast:',
@@ -1143,12 +1117,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(4,"breakfast");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(4, "breakfast");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1167,29 +1138,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(4,false,false),
+                                  child: GetDayBreakfast(4, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayBreakfast(4,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(4,true,false),
+                                  child: GetDayBreakfast(4, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayBreakfast(4, true, false),
                                 ),
                               ),
                             ],
@@ -1208,7 +1179,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Lunch:',
@@ -1216,12 +1188,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(4,"Lunch");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(4, "Lunch");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1237,29 +1206,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(4,false,false),
+                                  child: GetDayLunch(4, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayLunch(4,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(4,true,false),
+                                  child: GetDayLunch(4, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayLunch(4, true, false),
                                 ),
                               ),
                             ],
@@ -1281,7 +1250,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Dinner:',
@@ -1289,12 +1259,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(4,"dinner");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(4, "dinner");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1310,29 +1277,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(4,false,false),
+                                  child: GetDayDinner(4, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayDinner(4,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(4,true,false),
+                                  child: GetDayDinner(4, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayDinner(4, true, false),
                                 ),
                               ),
                             ],
@@ -1395,7 +1362,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Breakfast:',
@@ -1403,12 +1371,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(5,"breakfast");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(5, "breakfast");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1427,29 +1392,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(5,false,false),
+                                  child: GetDayBreakfast(5, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayBreakfast(5,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(5,true,false),
+                                  child: GetDayBreakfast(5, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayBreakfast(5, true, false),
                                 ),
                               ),
                             ],
@@ -1468,7 +1433,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Lunch:',
@@ -1476,12 +1442,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(5,"Lunch");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(5, "Lunch");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1497,29 +1460,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(5,false,false),
+                                  child: GetDayLunch(5, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayLunch(5,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(5,true,false),
+                                  child: GetDayLunch(5, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayLunch(5, true, false),
                                 ),
                               ),
                             ],
@@ -1541,7 +1504,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Dinner:',
@@ -1549,12 +1513,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(5,"dinner");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(5, "dinner");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1570,29 +1531,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(5,false,false),
+                                  child: GetDayDinner(5, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayDinner(5,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(5,true,false),
+                                  child: GetDayDinner(5, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayDinner(5, true, false),
                                 ),
                               ),
                             ],
@@ -1655,7 +1616,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Breakfast:',
@@ -1663,12 +1625,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(6,"breakfast");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(6, "breakfast");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1687,29 +1646,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(6,false,false),
+                                  child: GetDayBreakfast(6, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayBreakfast(6,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayBreakfast(6,true,false),
+                                  child: GetDayBreakfast(6, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayBreakfast(6, true, false),
                                 ),
                               ),
                             ],
@@ -1727,7 +1686,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Lunch:',
@@ -1735,12 +1695,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(6,"Lunch");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(6, "Lunch");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1756,29 +1713,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(6,false,false),
+                                  child: GetDayLunch(6, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayLunch(6,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayLunch(6,true,false),
+                                  child: GetDayLunch(6, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayLunch(6, true, false),
                                 ),
                               ),
                             ],
@@ -1800,7 +1757,8 @@ class _DietPlanState extends State<DietPlan> {
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 10, vertical: 5),
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(40),
+                                            borderRadius:
+                                                BorderRadius.circular(40),
                                           )),
                                       onPressed: () {},
                                       child: Text('Dinner:',
@@ -1808,12 +1766,9 @@ class _DietPlanState extends State<DietPlan> {
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed:() async{
-                                      await changeMeal(6,"dinner");
-                                      setState(()
-                                      {
-
-                                      });
+                                    onPressed: () async {
+                                      await changeMeal(6, "dinner");
+                                      setState(() {});
                                     },
                                     icon: Icon(
                                       Icons.change_circle,
@@ -1829,29 +1784,29 @@ class _DietPlanState extends State<DietPlan> {
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(6,false,false),
+                                  child: GetDayDinner(6, false, false),
                                 ),
                               ),
                             ],
                           ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    height: 45.0,
-                                    child: Padding(
-                                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                      child: GetDayDinner(6,true,true),
-                                    ),
-                                  ),
-                                ],
-                              ),
                           Row(
                             children: [
                               SizedBox(
                                 height: 45.0,
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                                  child: GetDayDinner(6,true,false),
+                                  child: GetDayDinner(6, true, true),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                height: 45.0,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                                  child: GetDayDinner(6, true, false),
                                 ),
                               ),
                             ],

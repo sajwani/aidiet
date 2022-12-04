@@ -6,7 +6,6 @@ import 'package:ai_diet_firebase/net/flutterfire.dart';
 import 'net/generatingdiet.dart';
 import 'net/userinfo.dart';
 
-
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
@@ -15,15 +14,10 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class ProfileScreenState extends State<ProfileScreen> {
-
-
   TextEditingController _weight = TextEditingController();
   TextEditingController _height = TextEditingController();
 
   @override
-
-
-
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
@@ -98,8 +92,7 @@ class ProfileScreenState extends State<ProfileScreen> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(40),
                             )),
-                        onPressed: () {
-                        },
+                        onPressed: () {},
                         child: Text('NAME', style: TextStyle(fontSize: 29)),
                       ),
                     ),
@@ -139,10 +132,7 @@ class ProfileScreenState extends State<ProfileScreen> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(40),
                             )),
-                        onPressed: () async{
-
-
-                        },
+                        onPressed: () async {},
                         child: Text('AGE', style: TextStyle(fontSize: 29)),
                       ),
                     ),
@@ -159,7 +149,6 @@ class ProfileScreenState extends State<ProfileScreen> {
                         child: GetAge(),
                       ),
                     ),
-
                   ],
                 ),
                 Row(
@@ -189,35 +178,30 @@ class ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ],
                 ),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children:[
-                      SizedBox(
-                        height: 45.0,
-                        width: w/3,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(15, 15, 0, 0),
-                          child: GetW(),
-                        ),
-                      ),
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-
-                          children: [
-                            IconButton(
-                                onPressed:(){
-                                  openDialogueBox(context);
-                                },
-                                icon: Icon(
-                                  Icons.edit,
-                                )
-                            )
-                          ],
-                        ),
-                      )
-                    ]
-                ),
+                Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  SizedBox(
+                    height: 45.0,
+                    width: w / 3,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(15, 15, 0, 0),
+                      child: GetW(),
+                    ),
+                  ),
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              openDialogueBox(context);
+                            },
+                            icon: Icon(
+                              Icons.edit,
+                            ))
+                      ],
+                    ),
+                  )
+                ]),
                 Row(
                   children: [
                     Container(),
@@ -245,34 +229,30 @@ class ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ],
                 ),
-                Row(
-                    children:[
-                      SizedBox(
-                        height: 45.0,
-                        width: w/3,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                          child: GetH(),
-                        ),
-                      ),
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-
-                          children: [
-                            IconButton(
-                                onPressed:(){
-                                  openDialogueBox1(context);
-                                },
-                                icon: Icon(
-                                  Icons.edit,
-                                )
-                            )
-                          ],
-                        ),
-                      )
-                    ]
-                ),
+                Row(children: [
+                  SizedBox(
+                    height: 45.0,
+                    width: w / 3,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                      child: GetH(),
+                    ),
+                  ),
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                              openDialogueBox1(context);
+                            },
+                            icon: Icon(
+                              Icons.edit,
+                            ))
+                      ],
+                    ),
+                  )
+                ]),
                 Row(
                   children: [
                     Container(),
@@ -300,20 +280,16 @@ class ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ],
                 ),
-
-                Row(
-                    children:[
-                      SizedBox(
-                        height: 45.0,
-                        width: w/3,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                          child:  GetBMI(),
-                        ),
-                      ),
-                    ]
-                ),
-
+                Row(children: [
+                  SizedBox(
+                    height: 45.0,
+                    width: w / 3,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                      child: GetBMI(),
+                    ),
+                  ),
+                ]),
                 Row(
                   children: [
                     Container(),
@@ -341,18 +317,16 @@ class ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ],
                 ),
-                Row(
-                    children:[
-                      SizedBox(
-                        height: 45.0,
-                        width: w/3,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
-                          child: GetBMR(),
-                        ),
-                      ),
-                    ]
-                ),
+                Row(children: [
+                  SizedBox(
+                    height: 45.0,
+                    width: w / 3,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(10, 15, 0, 0),
+                      child: GetBMR(),
+                    ),
+                  ),
+                ]),
                 Row(
                   children: [
                     Container(),
@@ -382,17 +356,13 @@ class ProfileScreenState extends State<ProfileScreen> {
                   ],
                 ),
                 SizedBox(height: 7.0),
-
               ],
             ),
           ],
         ),
       ),
-
-
     );
   }
-
 
   openDialogueBox(BuildContext context) {
     return showDialog(
@@ -413,14 +383,14 @@ class ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             actions: [
-              FlatButton(
+              TextButton(
                 onPressed: () {
                   submitAction(context);
                   Navigator.pop(context);
                 },
                 child: Text('Submit'),
               ),
-              FlatButton(
+              TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
@@ -431,11 +401,11 @@ class ProfileScreenState extends State<ProfileScreen> {
         });
   }
 
-  submitAction(BuildContext context) async{
+  submitAction(BuildContext context) async {
     // updatedData(_weight.text);
     idUsers.update({
-      "weight":double.parse(_weight.text),
-      "Diet Set":false,
+      "weight": double.parse(_weight.text),
+      "Diet Set": false,
     });
     await calcBMI();
     await calcBMR();
@@ -444,11 +414,8 @@ class ProfileScreenState extends State<ProfileScreen> {
     await GeneratingDiet();
 
 // print("$BMI in submit acttion");
-    setState(()
-    {
-    });
+    setState(() {});
     _weight.clear();
-
   }
 
   openDialogueBox1(BuildContext context) {
@@ -470,14 +437,14 @@ class ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             actions: [
-              FlatButton(
+              TextButton(
                 onPressed: () {
                   submitAction1(context);
                   Navigator.pop(context);
                 },
                 child: Text('Submit'),
               ),
-              FlatButton(
+              TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
@@ -488,11 +455,11 @@ class ProfileScreenState extends State<ProfileScreen> {
         });
   }
 
-  submitAction1(BuildContext context) async{
+  submitAction1(BuildContext context) async {
     // updatedData(_weight.text);
     idUsers.update({
-      "height":double.parse(_height.text),
-      "Diet Set":false,
+      "height": double.parse(_height.text),
+      "Diet Set": false,
     });
     await calcBMI();
     await calcBMR();
@@ -500,10 +467,7 @@ class ProfileScreenState extends State<ProfileScreen> {
     await addactivity("");
     await GeneratingDiet();
 // print("$BMI in submit acttion");
-    setState(()
-    {
-    });
+    setState(() {});
     _height.clear();
-
   }
 }
