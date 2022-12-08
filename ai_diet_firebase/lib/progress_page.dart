@@ -16,7 +16,7 @@ String formatDate(DateTime d) {
 
 
 
-String  ssteps = '?';
+String  ssteps = '0';
 class ProgressPage extends StatefulWidget {
   const ProgressPage({super.key});
 
@@ -545,9 +545,7 @@ class _ProgressPageState extends State<ProgressPage> {
                                           Icons.remove
                                       ),
                                     ),
-                                    Icon(
-                                      Icons.water_drop,
-                                    )
+
                                   ],
                                 ),
                               ),

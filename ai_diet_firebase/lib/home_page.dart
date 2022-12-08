@@ -166,8 +166,8 @@ class _HomePageState extends State<HomePage> {
                                         activeColor: Colors.blueAccent,
                                         onChanged: (newBool) async {
                                           if (breakfastcheckbox == false) {
-                                            // String calories=await getItem("breakfast", true);
-                                            getItem("breakfast", true, false);
+                                             String calories=await getItem("breakfast", true, false);
+                                            //getItem("breakfast", true, false);
                                             breakfastcheckbox = true;
                                             setCheckbox(true, "breakfast");
                                             //consumedcalories=consumedcalories+int.parse(calories);
@@ -178,14 +178,12 @@ class _HomePageState extends State<HomePage> {
                                                 false, consumedcalories, false);
                                           } else if (breakfastcheckbox ==
                                               true) {
-                                            // String calories=await getItem("breakfast", true);
-                                            getItem("breakfast", true, false);
+                                             String calories=await getItem("breakfast", true,false);
+                                            //getItem("breakfast", true, false);
                                             breakfastcheckbox = false;
                                             setCheckbox(false, "breakfast");
-                                            // consumedcalories=consumedcalories-int.parse(calories);
-                                            consumedcalories =
-                                                consumedcalories -
-                                                    int.parse(checkboxItem);
+                                             consumedcalories=consumedcalories-int.parse(calories);
+                                            //consumedcalories = consumedcalories - int.parse(checkboxItem);
                                             setConsumedCalories(
                                                 false, consumedcalories, false);
                                           }
@@ -242,25 +240,21 @@ class _HomePageState extends State<HomePage> {
                                         activeColor: Colors.blueAccent,
                                         onChanged: (newBool) async {
                                           if (lunchcheckbox == false) {
-                                            // String calories=await getItem("Lunch", true);
-                                            getItem("Lunch", true, false);
+                                             String calories=await getItem("Lunch", true,false);
+                                            //getItem("Lunch", true, false);
                                             lunchcheckbox = true;
                                             setCheckbox(true, "Lunch");
-                                            // consumedcalories=consumedcalories+int.parse(calories);
-                                            consumedcalories =
-                                                consumedcalories +
-                                                    int.parse(checkboxItem);
+                                             consumedcalories=consumedcalories+int.parse(calories);
+                                            //consumedcalories = consumedcalories + int.parse(checkboxItem);
                                             setConsumedCalories(
                                                 false, consumedcalories, false);
                                           } else if (lunchcheckbox == true) {
-                                            // String calories=await getItem("Lunch", true);
-                                            getItem("Lunch", true, false);
+                                             String calories=await getItem("Lunch", true,false);
+                                            //getItem("Lunch", true, false);
                                             lunchcheckbox = false;
                                             setCheckbox(false, "Lunch");
-                                            // consumedcalories=consumedcalories-int.parse(calories);
-                                            consumedcalories =
-                                                consumedcalories -
-                                                    int.parse(checkboxItem);
+                                             consumedcalories=consumedcalories-int.parse(calories);
+                                            //consumedcalories = consumedcalories - int.parse(checkboxItem);
                                             setConsumedCalories(
                                                 false, consumedcalories, false);
                                           }
@@ -318,25 +312,21 @@ class _HomePageState extends State<HomePage> {
                                         activeColor: Colors.blueAccent,
                                         onChanged: (newBool) async {
                                           if (dinnercheckbox == false) {
-                                            // String calories=await getItem("dinner", true);
-                                            getItem("dinner", true, false);
+                                             String calories=await getItem("dinner", true,false);
+                                            //getItem("dinner", true, false);
                                             dinnercheckbox = true;
                                             setCheckbox(true, "dinner");
-                                            // consumedcalories=consumedcalories+int.parse(calories);
-                                            consumedcalories =
-                                                consumedcalories +
-                                                    int.parse(checkboxItem);
+                                             consumedcalories=consumedcalories+int.parse(calories);
+                                            //consumedcalories = consumedcalories + int.parse(checkboxItem);
                                             setConsumedCalories(
                                                 false, consumedcalories, false);
                                           } else if (dinnercheckbox == true) {
-                                            // String calories=await getItem("dinner", true);
+                                             String calories=await getItem("dinner", true,false);
                                             getItem("dinner", true, false);
                                             dinnercheckbox = false;
                                             setCheckbox(false, "dinner");
-                                            // consumedcalories=consumedcalories-int.parse(calories);
-                                            consumedcalories =
-                                                consumedcalories -
-                                                    int.parse(checkboxItem);
+                                             consumedcalories=consumedcalories-int.parse(calories);
+                                            //consumedcalories = consumedcalories - int.parse(checkboxItem);
                                             setConsumedCalories(
                                                 false, consumedcalories, false);
                                           }
@@ -394,25 +384,21 @@ class _HomePageState extends State<HomePage> {
                                         activeColor: Colors.blueAccent,
                                         onChanged: (newBool) async {
                                           if (dinnercheckbox == false) {
-                                            // String calories=await getItem("dinner", true);
-                                            getItem("dinner", true, false);
+                                             String calories=await getItem("dinner", true,false);
+                                            //getItem("dinner", true, false);
                                             dinnercheckbox = true;
                                             setCheckbox(true, "dinner");
-                                            // consumedcalories=consumedcalories+int.parse(calories);
-                                            consumedcalories =
-                                                consumedcalories +
-                                                    int.parse(checkboxItem);
+                                             consumedcalories=consumedcalories+int.parse(calories);
+                                            //consumedcalories =consumedcalories +int.parse(checkboxItem);
                                             setConsumedCalories(
                                                 false, consumedcalories, false);
                                           } else if (dinnercheckbox == true) {
-                                            //String calories=await getItem("dinner", true);
-                                            getItem("dinner", true, false);
+                                            String calories=await getItem("dinner", true,false);
+                                            //getItem("dinner", true, false);
                                             dinnercheckbox = false;
                                             setCheckbox(false, "dinner");
-                                            // consumedcalories=consumedcalories-int.parse(calories);
-                                            consumedcalories =
-                                                consumedcalories -
-                                                    int.parse(checkboxItem);
+                                             consumedcalories=consumedcalories-int.parse(calories);
+                                            //consumedcalories = consumedcalories - int.parse(checkboxItem);
                                             setConsumedCalories(
                                                 false, consumedcalories, false);
                                           }
