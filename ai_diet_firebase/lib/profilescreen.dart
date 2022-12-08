@@ -335,26 +335,6 @@ class ProfileScreenState extends State<ProfileScreen> {
                 SizedBox(
                   height: 10.0,
                 ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(0, 0, 100, 0),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            elevation: 0.0,
-                            primary: Colors.red,
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 5),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(40),
-                            )),
-                        onPressed: () {},
-                        child: Text('DISEASE LIST',
-                            style: TextStyle(fontSize: 29)),
-                      ),
-                    ),
-                  ],
-                ),
                 SizedBox(height: 7.0),
               ],
             ),
