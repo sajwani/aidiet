@@ -19,19 +19,15 @@ Future<DocumentSnapshot<Map<String, dynamic>>> GeteName() async{
 
 
 Widget GetName(){
-  return FutureBuilder<DocumentSnapshot>(
-    future: futuredoc,
+  return FutureBuilder<String>(
+    future: getName(),
     builder: (context,snapshot){
       if(snapshot.hasError){
         return Text("${snapshot.error}");
       }else if(snapshot.hasData){
-        final doc = snapshot.data!;
-        final data = doc.data() as Map?;
-        final lll=data!["Name"] as String;
-        //String nnn=lll;
+        String nname=snapshot.data!;
         return Text(
-          //nnn, or
-          lll,
+          nname,
           style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold
@@ -42,6 +38,14 @@ Widget GetName(){
       return const CircularProgressIndicator();
     },
   );
+}
+
+
+Future<String> getName()async{
+  final doc1 = await idUsers.get();
+  final data1 = doc1.data() as Map<String, dynamic>;
+
+  return data1["Name"];
 }
 
 

@@ -1,3 +1,4 @@
+import 'package:ai_diet_firebase/net/flutterfire.dart';
 import 'package:ai_diet_firebase/password_reset.dart';
 import 'package:ai_diet_firebase/showoptions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -186,10 +187,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       context: context);
                   print(user);
                   if (user != null) {
+                    setIdUsersss();
                     await setCheckbox1();
                     await setConsumedCalories(true, 0, false);
-                    await setConsumedWater(
-                        true, 0, false); //we are tying without await
+                    await setConsumedWater(true, 0, false); //we are tying without await
                     Navigator.of(context).pushReplacement(
                         MaterialPageRoute(builder: (context) => ShowOptions()));
                   }

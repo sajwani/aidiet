@@ -6,12 +6,17 @@ import 'package:flutter/material.dart';
 import 'package:gender_picker/source/enums.dart';
 import 'package:intl/intl.dart';
 
-final user= FirebaseAuth.instance.currentUser!;
+var user= FirebaseAuth.instance.currentUser!;
 String currentuser= user.email!.toString() ;
-final idUsers= FirebaseFirestore.instance.collection("users").doc(currentuser);
+var idUsers= FirebaseFirestore.instance.collection("users").doc(currentuser);
 
 
-
+setIdUsersss()
+{
+   user= FirebaseAuth.instance.currentUser!;
+   currentuser= user.email!.toString() ;
+   idUsers= FirebaseFirestore.instance.collection("users").doc(currentuser);
+}
 
 
 Future<bool> SignUp(String email, String password, String name, String phonenumber) async {

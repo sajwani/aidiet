@@ -1,3 +1,5 @@
+import 'package:ai_diet_firebase/home_page.dart';
+import 'package:ai_diet_firebase/main.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -69,8 +71,14 @@ class ProfileScreenState extends State<ProfileScreen> {
                         onSelected: (value) {
                           if (value == 0) {
                             print("Settings menu is selected.");
-                          } else if (value == 1) {
-                            print("Logout menu is selected.");
+                          } else if (value == 2) {
+                            FirebaseAuth.instance.signOut();
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MyApp(),
+                              ),
+                            );
                           }
                         }),
                   ],
